@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdn.jsdelivr.net/npm/vue"></script>
+</head>
+
+<body>
+    <!-- 本例是事件修饰符，https://cn.vuejs.org/v2/guide/events.html#事件修饰符 -->
+    <div id="vue-app">
+        <h1>Events</h1>
+        <!-- @click.once单击事件只会触发一次 -->
+        <button @click.once="add(1)">涨一岁</button>
+        <button v-on:click="subtract(1)">减一岁</button>
+        <button @dblclick="add(10)">涨十岁</button>
+        <button v-on:dblclick="subtract(10)">减十岁</button>
+        <p>my age is {{age}}</p>
+        <!-- v-on:mousemove.stop阻止事件继续传播 -->
+        <div id="canvas" v-on:mousemove="updatexy">{{x}},{{y}} - <span v-on:mousemove.stop>stopMoving</span></div>
+    </div>
+    <script src="app.js"></script>
+</body>
+
+</html>
