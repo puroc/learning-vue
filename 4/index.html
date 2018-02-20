@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script src="https://cdn.jsdelivr.net/npm/vue"></script>
+</head>
+<body>
+    <div id="vue-app">
+        <h1>{{greet("morning")}}</h1>
+        <p>{{name}}</p>
+        <p>{{job}}</p>
+        <!-- v-bind绑定data中的值到到一个标签属性上 -->
+        <a v-bind:href="website">website</a>
+        <input type="text" v-bind:value="name">
+        <!-- 绑定一个html片段到一个标签上 -->
+        <p v-html="company"></p>
+    </div>
+    <script src="app.js"></script>
+</body>
+</html>
