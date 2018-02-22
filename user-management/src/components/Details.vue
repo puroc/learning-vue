@@ -31,7 +31,6 @@
         })
       },
       deleteCustomer(id){
-        console.log(id);
         this.$http.delete("http://localhost:3000/users/" + id).then(function(response){
           this.$router.push({path:"/",query:{alert:"删除成功"}})
         })

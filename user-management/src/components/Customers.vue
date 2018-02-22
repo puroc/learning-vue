@@ -9,6 +9,7 @@
           <th>年龄</th>
           <th>电话</th>
           <th>邮箱</th>
+          <th>操作</th>
         </tr>
       </thead>
       <tbody>
@@ -17,7 +18,10 @@
           <td>{{customer.age}}</td>
           <td>{{customer.phone}}</td>
           <td>{{customer.email}}</td>
-          <td><router-link class="btn btn-default" v-bind:to="'/customer/'+customer.id">详情</router-link></td>
+          <td>
+            <router-link class="btn btn-default" v-bind:to="'/customer/'+customer.id">详情</router-link>
+          </td>
+          
         </tr>
       </tbody>
     </table>
@@ -38,8 +42,9 @@ export default {
     fetchCustomers(){
       this.$http.get("http://localhost:3000/users").then(function(response){
         this.customers =  response.body;
+        console.log(this.customers)
       })
-    }
+    },
   },
   created(){
     if(this.$route.query.alert){
@@ -48,7 +53,7 @@ export default {
     this.fetchCustomers();
   },
   updated(){
-    this.fetchCustomers();
+    console.log("页面更新了");
   },
   components:{
     Alert
