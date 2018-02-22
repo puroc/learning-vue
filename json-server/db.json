@@ -1,50 +1,90 @@
 {
-    "users":[
-        {
-            "id":1,
-            "name":"zhangsan",
-            "phone":"13800000001",
-            "email":"zhangsan@qq.com",
-            "age":30,
-            "companyId":1
-        },
-        {
-            "id":2,
-            "name":"lisi",
-            "phone":"13800000001",
-            "email":"lisi@qq.com",
-            "age":35,
-            "companyId":1
-        },
-        {
-            "id":3,
-            "name":"wangwu",
-            "phone":"13800000001",
-            "email":"wangwu@qq.com",
-            "age":42,
-            "companyId":3
-        },
-        {
-            "id":4,
-            "name":"haha",
-            "phone":"13800000001",
-            "email":"haha@qq.com",
-            "age":28,
-            "companyId":2
-        }
-    ],
-    "companies":[
-        {
-            "id":1,
-            "name":"Apple"
-        },
-        {
-            "id":2,
-            "name":"Microsoft"
-        },
-        {
-            "id":3,
-            "name":"IBM"
-        }
-    ]
+  "users": [
+    {
+      "id": 1,
+      "name": "zhangsan",
+      "phone": "13800000001",
+      "email": "zhangsan@qq.com",
+      "age": 30,
+      "companyId": 1
+    },
+    {
+      "id": 2,
+      "name": "lisi",
+      "phone": "13800000001",
+      "email": "lisi@qq.com",
+      "age": 35,
+      "companyId": 1
+    },
+    {
+      "id": 3,
+      "name": "wangwu",
+      "phone": "13800000001",
+      "email": "wangwu@qq.com",
+      "age": 42,
+      "companyId": 3
+    },
+    {
+      "id": 4,
+      "name": "haha",
+      "phone": "13800000001",
+      "email": "haha@qq.com",
+      "age": 28,
+      "companyId": 2
+    },
+    {
+      "name": "xixi",
+      "age": "20",
+      "companyId": "2",
+      "id": 5
+    },
+    {
+      "name": "1",
+      "age": "1",
+      "phone": "1",
+      "companyId": "2",
+      "id": 6
+    },
+    {
+      "name": "2",
+      "age": "2",
+      "phone": "2",
+      "companyId": "2",
+      "id": 7
+    },
+    {
+      "name": "4",
+      "age": "4",
+      "phone": "4",
+      "id": 8
+    },
+    {
+      "name": "5",
+      "age": "5",
+      "phone": "5",
+      "companyId": "2",
+      "id": 9
+    },
+    {
+      "name": "6",
+      "age": "6",
+      "phone": "6",
+      "companyId": "2",
+      "id": 10
+    }
+  ],
+  "companies": [
+    {
+      "id": 1,
+      "name": "Apple"
+    },
+    {
+      "id": 2,
+      "name": "Microsoft"
+    },
+    {
+      "id": 3,
+      "name": "IBM"
+    }
+  ]
 }

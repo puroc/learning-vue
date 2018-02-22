@@ -22,6 +22,11 @@
                 <router-link to="/about">关于</router-link>
               </li>
             </ul>
+            <ul class="nav navbar-nav navbar-right">
+              <li>
+                <router-link to="/Add">添加用户</router-link>
+              </li>
+            </ul>
           </div>
           <!-- /.navbar-collapse -->
         </div>
