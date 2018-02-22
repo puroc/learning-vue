@@ -1,14 +1,6 @@
 {
   "users": [
     {
-      "id": 1,
-      "name": "zhangsan",
-      "phone": "13800000001",
-      "email": "zhangsan@qq.com",
-      "age": 30,
-      "companyId": 1
-    },
-    {
       "id": 2,
       "name": "lisi",
       "phone": "13800000001",
@@ -31,32 +23,6 @@
       "email": "haha@qq.com",
       "age": 28,
       "companyId": 2
-    },
-    {
-      "name": "xixi",
-      "age": "20",
-      "companyId": "2",
-      "id": 5
-    },
-    {
-      "name": "1",
-      "age": "1",
-      "phone": "1",
-      "companyId": "2",
-      "id": 6
-    },
-    {
-      "name": "2",
-      "age": "2",
-      "phone": "2",
-      "companyId": "2",
-      "id": 7
-    },
-    {
-      "name": "4",
-      "age": "4",
-      "phone": "4",
-      "id": 8
     },
     {
       "name": "5",
