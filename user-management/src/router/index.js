@@ -4,6 +4,7 @@ import HelloWorld from '@/components/HelloWorld'
 import Customers from '@/components/Customers'
 import About from '@/components/About'
 import Add from '@/components/Add'
+import Details from '@/components/Details'
 
 Vue.use(Router)
 
@@ -24,6 +25,11 @@ export default new Router({
       path: '/add',
       name: 'Add',
       component: Add
+    },
+    {
+      path: '/customer/:id',
+      name: 'Details',
+      component: Details
     }
   ]
 })

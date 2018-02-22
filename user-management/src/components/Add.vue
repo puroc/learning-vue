@@ -68,7 +68,7 @@
           }
           this.$http.post("http://localhost:3000/users", newCustomer).then(function(response) {
             console.log(response);
-            this.$router.push({"path":"/"});
+            this.$router.push({"path":"/","query":{alert:"添加成功"}});
           });
         }
         
