@@ -2,6 +2,8 @@
   <div class="customers container">
   <Alert v-if="alert" v-bind:message="alert"></Alert>
     <h1 class="page-header">用户管理系统</h1>
+    <input type="text" class="form-control" placeholder="搜索" v-model="filterInput">
+    <br/>
     <table class="table table-striped">
       <thead>
         <tr>
@@ -13,7 +15,7 @@
         </tr>
       </thead>
       <tbody>
-        <tr v-for="customer in customers">
+        <tr v-for="customer in filterBy(customers,filterInput)">
           <td>{{customer.name}}</td>
           <td>{{customer.age}}</td>
           <td>{{customer.phone}}</td>
@@ -35,7 +37,8 @@ export default {
   data () {
     return {
       customers:[],
-      alert:""
+      alert:"",
+      filterInput:""
     }
   },
   methods:{
@@ -45,6 +48,13 @@ export default {
         console.log(this.customers)
       })
     },
+    filterBy(customers,value){
+      console.log("customers",customers)
+      console.log("value",value)
+      return customers.filter(function(customer){
+        return customer.name.match(value);
+      })
+    }
   },
   created(){
     if(this.$route.query.alert){
