@@ -26,7 +26,7 @@ export const store = new Vuex.Store({
             return result;
         }
     },
-    // mutations用来执行事件
+    // mutations用来执行同步操作
     mutations: {
         reducePrice(state,payload) {
             state.products.forEach(product => {
@@ -34,7 +34,7 @@ export const store = new Vuex.Store({
             });
         }
     },
-    // actions用来异步执行事件
+    // actions用来执行异步操作
     actions: {
         reducePrice(context, payload) {
             setTimeout(function () { context.commit("reducePrice", payload); }, 2000);
