@@ -14,17 +14,19 @@ export const store = new Vuex.Store({
     },
     // getters用来获取数据
     getters: {
-        saleProducts(state) {
-            let result = state.products.map(
-                product => {
-                    return {
-                        name: product.name,
-                        price: product.price 
-                    }
-                }
-            );
-            return result;
-        }
+        // saleProducts:(state) => (num) => {
+        //     return state.products.map(product=>{
+        //         return {
+        //             name: product.name,
+        //             price: num
+        //         }
+        //     })
+        //   },
+          saleProducts:(state) => (num) => {
+            return state.products.filter(product=>{
+                return product.price >= num
+            })
+          }
     },
     // mutations用来执行同步操作
     mutations: {
