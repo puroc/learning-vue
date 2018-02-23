@@ -12,6 +12,8 @@
 </template>
 
 <script>
+import {mapGetters,mapActions} from "vuex"
+
 export default {
   name: 'product-list-one',
   // props:["products"],
@@ -24,15 +26,21 @@ export default {
     products(){
       return this.$store.state.products;
     },
-    saleProducts(){
-      return this.$store.getters.saleProducts;
-    }
+    // saleProducts(){
+    //   return this.$store.getters.saleProducts;
+    // }
+    ...mapGetters([
+      "saleProducts"
+    ])
   },
   methods:{
-    reducePrice(amount){
-      // this.$store.commit("reducePrice");
-      this.$store.dispatch("reducePrice",amount);
-    }
+    // reducePrice(amount){
+    //   // this.$store.commit("reducePrice");
+    //   this.$store.dispatch("reducePrice",amount);
+    // }
+    ...mapActions([
+      "reducePrice"
+    ])
   }
 }
 </script>
