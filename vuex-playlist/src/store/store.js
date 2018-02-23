@@ -13,7 +13,7 @@ export const store = new Vuex.Store({
     },
     getters: {
         saleProducts: (state) => {
-            var result = state.products.map(
+            let result = state.products.map(
                 product => {
                     return {
                         name: "**" + product.name + "**",
