@@ -4,6 +4,7 @@ import Vuex from 'vuex'
 Vue.use(Vuex)
 
 export const store = new Vuex.Store({
+    // state用来存储数据
     state: {
         products: [
             { name: "张三", price: 200 },
@@ -11,17 +12,33 @@ export const store = new Vuex.Store({
             { name: "王五", price: 300 }
         ]
     },
+    // getters用来获取数据
     getters: {
-        saleProducts(state){
+        saleProducts(state) {
             let result = state.products.map(
                 product => {
                     return {
-                        name: "**" + product.name + "**",
-                        price: product.price / 2
+                        name: product.name,
+                        price: product.price 
                     }
                 }
             );
             return result;
+        }
+    },
+    // mutations用来执行事件
+    mutations: {
+        reducePrice(state,payload) {
+            state.products.forEach(product => {
+                product.price -= payload;
+            });
+        }
+    },
+    // actions用来异步执行事件
+    actions: {
+        reducePrice(context, payload) {
+            setTimeout(function () { context.commit("reducePrice", payload); }, 2000);
+
         }
     }
 });
