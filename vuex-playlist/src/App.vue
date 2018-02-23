@@ -1,7 +1,9 @@
 <template>
   <div id="app">
-    <product-list-one v-bind:products="products"></product-list-one>
-    <product-list-two v-bind:products="products"></product-list-two>
+    <product-list-one></product-list-one>
+    <product-list-two></product-list-two>
+    <!-- <product-list-one v-bind:products="products"></product-list-one>
+    <product-list-two v-bind:products="products"></product-list-two> -->
   </div>
 </template>
 

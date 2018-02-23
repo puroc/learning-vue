@@ -1,9 +1,9 @@
 import Vue from 'vue'
 import Vuex from 'vuex'
 
-Vue.user(vuex)
+Vue.use(Vuex)
 
-const store = new Vuex.Store({
+export const store = new Vuex.Store({
     state:{
         products:[
             {name:"张三",price:200},
@@ -11,4 +11,4 @@ const store = new Vuex.Store({
             {name:"王五",price:300}
         ]
     }
-})
+});
