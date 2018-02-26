@@ -1,4 +1,4 @@
-# vue-scaffold
+# vue-template
 
 > A Vue.js project
 
